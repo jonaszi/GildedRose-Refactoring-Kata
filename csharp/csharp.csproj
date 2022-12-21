@@ -61,11 +61,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApprovalTest.cs" />
-    <Compile Include="GildedRose.cs" />
-    <Compile Include="GildedRoseTest.cs" />
-    <Compile Include="Item.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="BusinessLogic\ProductHandlers\ConjuredHandler.cs" />
+    <Compile Include="Tests\ApprovalTest.cs" />
+    <Compile Include="BusinessLogic\ProductHandlers\SulfurasHandler.cs" />
+    <Compile Include="BusinessLogic\ProductHandlers\BackstagePassHandler.cs" />
+    <Compile Include="BusinessLogic\GildedRose.cs" />
+    <Compile Include="BusinessLogic\IProductHandler.cs" />
+    <Compile Include="BusinessLogic\ProductHandlerBase.cs" />
+    <Compile Include="BusinessLogic\ProductHandlers\AgedBrieHandler.cs" />
+    <Compile Include="BusinessLogic\ProductHandlers\RegularProductHandler.cs" />
+    <Compile Include="BusinessLogic\ProductUpdater.cs" />
+    <Compile Include="Tests\GildedRoseTest.cs" />
+    <Compile Include="Entity\Item.cs" />
+    <Compile Include="UI\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -74,6 +82,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Notes.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
